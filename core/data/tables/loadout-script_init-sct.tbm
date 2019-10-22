@@ -1,0 +1,16 @@
+#Conditional Hooks
+$Application: FS2_Open
+
+;; Utility & parsing
+$On Game Init: [[utility.lua]]
+$On Game Init: [[parse.lua]]
+$On Game Init: [[TableObject.lua]]
+$On Game Init: [[Category.lua]]
+$On Game Init: [[Entry.lua]]
+$On Game Init: [[Attribute.lua]]
+
+;; weapon variant
+$On Game Init: [[weapon_variants.lua]]
+$On Gameplay Start:[setWeaponVariantsMissionWide()]
+
+#End

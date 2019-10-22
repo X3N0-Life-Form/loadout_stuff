@@ -1,0 +1,95 @@
+#Ship Classes
+
+;=====>> TERRANS <<=======
+$Name:                          GTF Ulysses#Pirate
+$Short name:            TFight
+$Species:                       Terran
++Type:                          XSTR("Space Superiority", 2939)
++Maneuverability:       XSTR("Excellent", 2940)
++Armor:                         XSTR("Light", 2941)
++Manufacturer:          XSTR("Triton / Mekhu", 2942)
++Description:			XSTR( " ", 2943)
+$end_multi_text
++Tech Description:
+XSTR("Affectionately nicknamed 'The Bat' by its pilots, the GTF Ulysses is a well-designed craft that has had a far longer useful life than its engineers ever imagined. Developed jointly by Terran and Vasudan contractors, the Ulysses was first deployed near the end of the Great War. Its excellent maneuverability and high top speed give it an agility that pilots love, but at a cost of thin armor and a small secondary weapon loadout. The Ulysses is a better choice for offensive missions than defensive ones.", 2944)
+$end_multi_text
++Length:          16 m
++Gun Mounts:      4
++Missile Banks:   1
+$POF file:                      fighter01.pof
+$Detail distance:       (0, 80, 300, 900)
+; $ND: 							42 42 244
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.1
+$Rotdamp:                       0.35
+$Max Velocity:          0.0, 0.0, 70.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:         3.0, 2.6, 5.0
+$Rear Velocity:         0.0
+$Forward accel:         2.0
+$Forward decel:         1.5
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        25.0
+$Expl outer rad:        55.0
+$Expl damage:           15.0
+$Expl blast:            1000.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Allowed PBanks:        ( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "Targeting Laser")
+$Allowed Dogfight PBanks:        ( "Subach HL-D" "Prometheus D" )
+$Default PBanks:        ( "Subach HL-7" "Prometheus R" )
+$Allowed SBanks:        ( "Rockeye" "Tempest"  "Hornet" "Tornado" "Hornet#Weak" "Harpoon" "Harpoon#Weak" "EMP Adv." "TAG-A" )
+$Allowed Dogfight SBanks:    ( "Tempest D"  "Hornet D" "Harpoon D" )
+$Default SBanks:        ( "Harpoon" )
+$SBank Capacity:        ( 40 )
+$Shields:                       380
+$Shield Color:		100 100 255
+$Power Output:          2.0
+$Max Oclk Speed:        94.0
+$Max Weapon Eng:        80.0
+$Hitpoints:                     180
+$Flags:                         ( "player_ship" "default_player_ship" "fighter" "in tech database")
+$AI Class:                      Captain
+$Afterburner:           YES
+	+Aburn Max Vel: 0.0, 0.0, 150.0
+	+Aburn For accel:       0.7
+	+Aburn Fuel:            300.0
+	+Aburn Burn Rate:       50.0
+	+Aburn Rec Rate:        25.0
+$Countermeasures:       25
+$Scan time:                     2000
+$EngineSnd:       128                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -22
+$Closeup_zoom:          0.5
+$Shield_icon:           shield-f01
+$Ship_icon:                     iconfighter01
+$Ship_anim:                     ssfighter01
+$Ship_overhead: loadfighter01
+$Score:             8
+$Trail:
+	+Offset:		-7.75 -2.8 0.75
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	60
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		7.75 -2.8 0.75
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	60
+	+Bitmap:	Contrail01
+$Subsystem:                     communication,  10, 0
+$Subsystem:                     navigation,             10, 0
+$Subsystem:                     weapons,                        20, 0
+$Subsystem:                     sensors,                        10, 0
+$Subsystem:                     engines,                        35, 0
+
+
+#End

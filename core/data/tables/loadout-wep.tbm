@@ -1,0 +1,191 @@
+#Primary Weapons
+
+$Name:                                 Prometheus S#Red
++Title:                                XSTR("GTW-5 Prometheus (standard) Cannon", 3274)
++Description:
+XSTR(
+"Medium Energy Usage
+Level 5 Hull Damage
+Level 4 Shield Damage", 3275)
+$end_multi_text
++Tech Title:				   XSTR("GTW-5 Prometheus S", 3276)
++Tech Anim:					   Tech_GTW-5_Prometheus_S
++Tech Description:
+XSTR(
+"The original GTW-5 Prometheus S was removed from service when the link to Earth was lost and the GTVA was unable to obtain sufficient quantities of argon (a required element in the Prometheus's power-generation module). Recent deployment of Anuket and Zephyrus gas miners has enabled us to resume production of the GTW-5 Prometheus S. The S-type is a minor variant of the original Prometheus laser cannon. The S-type's faster recharge cycle and lower energy drain cause many pilots to prefer it over the R variant.", 3277)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							LaserGlow03-red
+@Laser Glow:						   2_laserglow03
+@Laser Color:						   150, 20, 20
+@Laser Color2:						   150, 20, 20
+@Laser Length:							10.0
+@Laser Head Radius:						1.0
+@Laser Tail Radius:						1.0
+$Mass:                                 0.2
+$Velocity:                             750.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.35                            ;; in seconds
+$Damage:                               30
+$Armor Factor:							0.9
+$Shield Factor:							1.0
+$Subsystem Factor:						0.35
+$Lifetime:                             2.0
+$Energy Consumed:						1.0                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            80                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed")
+$Icon:                                 iconPromS
+$Anim:                                 PromS
+$Impact Explosion:							none
+
+
+$Name:                                 Prometheus S#Blue
++Title:                                XSTR("GTW-5 Prometheus (standard) Cannon", 3274)
++Description:
+XSTR(
+"Medium Energy Usage
+Level 5 Hull Damage
+Level 4 Shield Damage", 3275)
+$end_multi_text
++Tech Title:				   XSTR("GTW-5 Prometheus S", 3276)
++Tech Anim:					   Tech_GTW-5_Prometheus_S
++Tech Description:
+XSTR(
+"The original GTW-5 Prometheus S was removed from service when the link to Earth was lost and the GTVA was unable to obtain sufficient quantities of argon (a required element in the Prometheus's power-generation module). Recent deployment of Anuket and Zephyrus gas miners has enabled us to resume production of the GTW-5 Prometheus S. The S-type is a minor variant of the original Prometheus laser cannon. The S-type's faster recharge cycle and lower energy drain cause many pilots to prefer it over the R variant.", 3277)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							LaserGlow03-blue
+@Laser Glow:						   2_laserglow03
+@Laser Color:						   20, 20, 150
+@Laser Color2:						   20, 20, 150
+@Laser Length:							10.0
+@Laser Head Radius:						1.0
+@Laser Tail Radius:						1.0
+$Mass:                                 0.2
+$Velocity:                             750.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.35                            ;; in seconds
+$Damage:                               30
+$Armor Factor:							0.9
+$Shield Factor:							1.0
+$Subsystem Factor:						0.35
+$Lifetime:                             2.0
+$Energy Consumed:						1.0                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            80                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed")
+$Icon:                                 iconPromS
+$Anim:                                 PromS
+$Impact Explosion:							none
+
+
+
+#End
+
+
+#Secondary Weapons
+
+$Name:                                  @Rockeye#Red
++Title:                                 XSTR("GTM MX-64 Rockeye", 3309)
++Description:
+XSTR(
+"Standard Issue
+Fire and Forget", 3310)
+$end_multi_text
++Tech Title:				   XSTR("GTM MX-64 Rockeye", 3311)
++Tech Anim:					   Tech_GTM_MX-64_Rockeye
++Tech Description:
+XSTR(
+"The GTM MX-64 Rockeye is a faster, more accurate, larger payload version of the MX-50 that was in service at the beginning of the Great War. The missile developed as a result of experimentation by engineers at some of STX Exploration's most isolated mining operations, in the systems of Laramis and Luyten 726-BA. Advances in remote-controlled explosive devices were used by GTVA engineers to improve the old MX-50s. The heat-seeking MX-64 Rockeye is now a standard loadout for Terran fighter craft.", 3312)
+$end_multi_text
+$Model File:							rockeye.pof
+$Mass:									5.0
+$Velocity:								190.0
+$Fire Wait:								0.5
+$Damage:								45														;; damage applied when within inner radius
+$Blast Force:							200.0
+$Inner Radius:							20.0													;; radius at which damage is full
+$Outer Radius:							40.0													;; max radius for attenuated damage
+$Shockwave Speed:						0.0													;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.8
+$Subsystem Factor:						0.8
+$Lifetime:								10.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							4.0													;; Amount of space taken up in weapon cargo
+$Homing:								YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:								HEAT													;; Legal: HEAT, ASPECT
+	+Turn Time:							0.85
+	+View Cone:							100.0													;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:								87														;; The sound it makes when fired
+$ImpactSnd:								88														;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							4.0													;; number of missiles/sec that are rearmed
+$Flags:									("in tech database" "player allowed")                                          ;; 
+$Trail:																									;; Trail cannot be set if Exhaust is set	
+	+Start Width:            			0.4                                       ;; Width of trail nearest missile
+	+End Width: 	           			0.1                                       ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:							0.2                                       ;; how many seconds before trail disappears
+	+Bitmap:							newmiss3										;; Bitmap used to draw trail
+$Icon:									iconMX-64
+$Anim:									mx64
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				5.0
+
+$Name:                                  @Rockeye#Blue
++Title:                                 XSTR("GTM MX-64 Rockeye", 3309)
++Description:
+XSTR(
+"Standard Issue
+Fire and Forget", 3310)
+$end_multi_text
++Tech Title:				   XSTR("GTM MX-64 Rockeye", 3311)
++Tech Anim:					   Tech_GTM_MX-64_Rockeye
++Tech Description:
+XSTR(
+"The GTM MX-64 Rockeye is a faster, more accurate, larger payload version of the MX-50 that was in service at the beginning of the Great War. The missile developed as a result of experimentation by engineers at some of STX Exploration's most isolated mining operations, in the systems of Laramis and Luyten 726-BA. Advances in remote-controlled explosive devices were used by GTVA engineers to improve the old MX-50s. The heat-seeking MX-64 Rockeye is now a standard loadout for Terran fighter craft.", 3312)
+$end_multi_text
+$Model File:							rockeye.pof
+$Mass:									5.0
+$Velocity:								190.0
+$Fire Wait:								0.5
+$Damage:								45														;; damage applied when within inner radius
+$Blast Force:							200.0
+$Inner Radius:							20.0													;; radius at which damage is full
+$Outer Radius:							40.0													;; max radius for attenuated damage
+$Shockwave Speed:						0.0													;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.8
+$Subsystem Factor:						0.8
+$Lifetime:								10.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							4.0													;; Amount of space taken up in weapon cargo
+$Homing:								YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:								HEAT													;; Legal: HEAT, ASPECT
+	+Turn Time:							0.85
+	+View Cone:							100.0													;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:								87														;; The sound it makes when fired
+$ImpactSnd:								88														;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							4.0													;; number of missiles/sec that are rearmed
+$Flags:									("in tech database" "player allowed")                                          ;; 
+$Trail:																									;; Trail cannot be set if Exhaust is set	
+	+Start Width:            			0.4                                       ;; Width of trail nearest missile
+	+End Width: 	           			0.1                                       ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:							0.2                                       ;; how many seconds before trail disappears
+	+Bitmap:							newmiss3										;; Bitmap used to draw trail
+$Icon:									iconMX-64
+$Anim:									mx64
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				5.0
+
+#End

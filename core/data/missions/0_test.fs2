@@ -1,0 +1,722 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Loadout test", -1)
+$Author: X3N0-Life-Form
+$Created: 10/19/19 at 16:27:18
+$Modified: 10/19/19 at 18:27:48
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 1024
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: -3.770820, 547.550415, -313.181793
++Viewer orient:
+	0.999446, 0.000001, -0.033297,
+	0.024935, 0.662696, 0.748474,
+	0.022066, -0.748889, 0.662328
+
+
+$AI Profile: FS2 RETAIL
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Players		;! 1 total
+
+$Starting Shipname: Alpha 1
+$Ship Choices: (
+	"GTF Ulysses"	5
+	"GTF Hercules"	5
+	"GTF Hercules Mark II"	5
+	"GTF Ares"	5
+	"GTF Erinyes"	5
+	"GTF Loki"	5
+	"GTF Pegasus"	5
+	"GTF Perseus"	5
+	"GTF Myrmidon"	5
+	"SF Mara (terrans)"	5
+	"GTB Artemis"	5
+	"GTB Artemis D.H."	5
+	"GTB Medusa"	5
+	"GTB Ursa"	5
+	"GTB Zeus"	5
+	"GTB Boanerges"	5
+	"GVF Ptah"	5
+	"GTF Ulysses#Pirate"	5
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	16
+	"Subach HL-D"	16
+	"Mekhu HL-7"	16
+	"Mekhu HL-7D"	16
+	"Akheton SDG"	16
+	"Morning Star"	16
+	"MorningStar D"	16
+	"Prometheus R"	16
+	"Prometheus S"	40
+	"Prometheus D"	16
+	"Maxim"	16
+	"Maxim D"	16
+	"UD-8 Kayser"	16
+	"UD-D Kayser"	16
+	"Circe"	16
+	"Lamprey"	16
+	"Prometheus S#Red"	16
+	"Prometheus S#Blue"	16
+	"Rockeye"	600
+	"Rockeye D"	500
+	"Tempest"	500
+	"Tempest D"	500
+	"Hornet"	500
+	"Hornet D"	500
+	"Tornado"	500
+	"Tornado D"	500
+	"Harpoon"	500
+	"Harpoon D"	500
+	"Trebuchet"	500
+	"TAG-A"	500
+	"TAG-B"	500
+	"Piranha"	500
+	"Stiletto II"	500
+	"Infyrno"	500
+	"Infyrno D"	500
+	"Cyclops"	500
+	"Cyclops#short"	500
+	"Helios"	500
+	"EMP Adv."	500
+	"Rockeye#Red"	500
+	"Rockeye#Blue"	500
+)
+
+#Objects		;! 18 total
+
+$Name: Alpha 1		;! Object #0
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 2		;! Object #1
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: -51.042683, -38.975830, -10.608398
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 3		;! Object #2
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: 36.998440, -26.238586, -30.855225
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 4		;! Object #3
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: -83.129211, -38.975830, -33.780624
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 1		;! Object #4
+$Class: GTF Ulysses#Pirate
+$Team: Friendly
+$Location: 36.814568, 27.019043, 59.570892
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 2		;! Object #5
+$Class: GTF Ulysses#Pirate
+$Team: Friendly
+$Location: 72.478577, 27.019043, 22.063843
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 3		;! Object #6
+$Class: GTF Ulysses#Pirate
+$Team: Friendly
+$Location: -8.921738, 27.019043, 22.982910
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 4		;! Object #7
+$Class: GTF Ulysses#Pirate
+$Team: Friendly
+$Location: -40.929192, 27.019043, 70.407532
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Target		;! Object #8
+$Class: SC Cain
+$Team: Hostile
+$Location: 13.718439, -0.000092, 332.562378
+$Orientation:
+	0.036957, -0.993868, -0.104211,
+	0.332188, 0.110570, -0.936710,
+	0.942489, 0.000000, 0.334238
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
+$Name: Gamma 1		;! Object #9
+$Class: GTF Loki
+$Team: Friendly
+$Location: -143.028351, 0.000000, 112.522064
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Gamma 2		;! Object #10
+$Class: GTF Loki
+$Team: Friendly
+$Location: -109.825340, 0.000000, 88.808197
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Gamma 3		;! Object #11
+$Class: GTF Loki
+$Team: Friendly
+$Location: -101.368164, 0.000000, 51.546539
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Gamma 4		;! Object #12
+$Class: GTF Loki
+$Team: Friendly
+$Location: -135.239243, 0.000000, 57.377045
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Delta 1		;! Object #13
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 289.572632, 0.000000, 377.038544
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Delta 2		;! Object #14
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 365.955750, 0.000000, 445.270233
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Delta 3		;! Object #15
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 360.281738, 0.000000, 356.057526
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Delta 4		;! Object #16
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 325.148193, 0.000000, 321.511749
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Rockeye" "Rockeye" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Gun Test		;! Object #17
+$Class: GTSG Alastor
+$Team: Friendly
+$Location: 103.093826, 0.000000, 177.695984
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Primary Banks: ( "Prometheus S#Red" )
++Subsystem: turret02a
++Primary Banks: ( "Prometheus S#Blue" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 9
+
+#Wings		;! 4 total
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
+$AI Goals: ( goals ( ai-chase "Target" 50 ) )
++Hotkey: 0
++Flags: ( )
+
+$Name: Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Beta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Beta 1"
+	"Beta 2"
+	"Beta 3"
+	"Beta 4"
+)
+$AI Goals: ( goals ( ai-chase "Target" 50 ) )
++Hotkey: 1
++Flags: ( )
+
+$Name: Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+	"Gamma 4"
+)
+$AI Goals: ( goals ( ai-chase "Target" 50 ) )
++Hotkey: 2
++Flags: ( )
+
+$Name: Delta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Delta 1
+
+$Arrival Location: Hyperspace
++Arrival delay: 5
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Delta 1"
+	"Delta 2"
+	"Delta 3"
+	"Delta 4"
+)
+$AI Goals: ( goals ( ai-chase "Target" 50 ) )
++Flags: ( )
+
+#Events		;! 0 total
+
+
+#Goals		;! 0 total
+
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 500
+$Ambient light level: 7895160
++Nebula: Nebula01
++Color: Blue
++Pitch: 154
++Bank: 210
++Heading: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+
