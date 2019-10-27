@@ -12,5 +12,6 @@ $On Game Init: [[Attribute.lua]]
 ;; weapon variant
 $On Game Init: [[weapon_variants.lua]]
 $On Gameplay Start:[setWeaponVariantsMissionWide()]
+$On Warp In:[setWeaponVariantDelayed()]
 
 #End

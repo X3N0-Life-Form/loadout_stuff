@@ -1,5 +1,17 @@
 --[[
-	TODO : doc
+	Table example:
+	
+	#Prometheus S
+
+	$Name:		Red
+	$Ships:		GTF Ulysses, GTF Myrmydon, GTF Perseus
+
+
+	$Name:		Blue
+	$Ships:		GTF Ulysses#Pirate, GVF Serapis, GVF Tauret
+
+
+	#End
 ]]--
 ----------------------
 -- global variables --
@@ -25,30 +37,46 @@ end
 -- core functions --
 --------------------
 
+--[[
+	Sets weapon variants for every ship currently in-mission
+]]
 function setWeaponVariantsMissionWide()
 	dPrint_weaponVariant("setWeaponVariantsMissionWide() start")
-	
 	
 	for sIndex = 1, #mn.Ships do
 		local currentShip = mn.Ships[sIndex]
 		dPrint_weaponVariant("\tCurrent ship : "..currentShip.Name.." ("..currentShip.Class.Name..")")
-		local primaries = currentShip.PrimaryBanks
-		local secondaries = currentShip.SecondaryBanks
-		
-		dPrint_weaponVariant("\tPrimary loop")
-		setWeaponVariant(currentShip, primaries, 'primary')
-		
-		dPrint_weaponVariant("\tSecondary loop")
-		setWeaponVariant(currentShip, secondaries, 'secondary')
+		setWeaponVariant(currentShip)
 	end
 	
 	dPrint_weaponVariant("setWeaponVariantsMissionWide() end")
 end
 
 --[[
+	Sets weapon variants for the specified ship
 
+	@param ship : ship handle
 ]]
-function setWeaponVariant(currentShip, bank, bankType)
+function setWeaponVariant(ship)
+	local primaries = ship.PrimaryBanks
+	local secondaries = ship.SecondaryBanks
+	
+	dPrint_weaponVariant("\tPrimary loop")
+	setWeaponVariantForBank(ship, primaries, 'primary')
+	
+	dPrint_weaponVariant("\tSecondary loop")
+	setWeaponVariantForBank(ship, secondaries, 'secondary')
+end
+
+--[[
+	Sets weapon variants for each weapon in the specified bank
+	
+	@param ship : ship handle
+	@param bank : weapon bank handle
+	@param bankType : weapon bank type, 'primary' or 'secondary'
+]]
+function setWeaponVariantForBank(ship, bank, bankType)
+	-- For each weapon in the specified bank
 	for wIndex = 1, #bank do
 		local currentClass = bank[wIndex].WeaponClass
 		dPrint_weaponVariant("\t\tCurrent weapon : "..currentClass.Name.." (bank #"..wIndex..")")
@@ -57,19 +85,21 @@ function setWeaponVariant(currentShip, bank, bankType)
 			dPrint_weaponVariant("\t\t\tWeapon has variants")
 			
 			local variants = weaponVariantTable.Categories[currentClass.Name].Entries
+			-- Find the Ship's variant, if it exists
 			for index, entry in pairs(variants) do
-				if (contains(entry.Attributes['Ships'].Value, currentShip.Class.Name)) then
+				if (contains(entry.Attributes['Ships'].Value, ship.Class.Name)) then
 					local weaponVariantName = currentClass.Name.."#"..entry.Name
 					dPrint_weaponVariant("\t\t\tReplacing "..bankType.." "..currentClass.Name.." with "..weaponVariantName)
 					mn.evaluateSEXP([[
 						(when  (true)
 							(set-]]..bankType..[[-weapon
-								"]]..currentShip.Name..[["
+								"]]..ship.Name..[["
 								]]..(wIndex-1)..[[
 								"]]..weaponVariantName..[["
 							)
 						)
 					]])
+					break
 				end
 			end
 		end
@@ -90,16 +120,15 @@ function hasWeaponVariants(weaponClassName)
 end
 
 
--- TODO
+--[[
+	Call on a "$On Warp In" hook. Sets the weapon variants for the newly arrived ship
+]]
 function setWeaponVariantDelayed()
-	for shipName, variantName in pairs(weaponVariantShipsToSet) do
-		local ship = mn.Ships[shipName]
-		if not (ship == nil) then
-			dPrint_weaponVariant("setWeaponVariantDelayed: setting weapon variant "..shipName.." ==> "..variantName)
-			weaponVariantShipsToSet[shipName] = nil
-			setWeaponVariant(shipName, variantName)
-		end
-	end
+	local shipName = hv.Self.Name
+	local ship = mn.Ships[shipName]
+	dPrint_weaponVariant("Setting delayed weapon variant for "..shipName.." ("..ship.Class.Name..")")
+	
+	setWeaponVariant(ship)
 end
 
 
